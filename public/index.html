@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentinstag - Layal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ==================== SPARKLE CANVAS ==================== -->
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- ==================== FLOATING HEARTS ==================== -->
+  <div id="floating-hearts" aria-hidden="true"></div>
+
+  <!-- ==================== LANDING PAGE ==================== -->
+  <div id="landing" class="screen active">
+    <div class="card">
+      <div class="heart-icon">💘</div>
+      <h1>Layal</h1>
+      <p class="subtitle">Willst du am <strong>14.02.2026</strong> mein Valentinstags-Date sein?</p>
+      <p class="subtext" id="nein-comment">Du machst mich zum glücklichsten Menschen der Welt...</p>
+      <div class="buttons">
+        <button id="btn-ja" class="btn btn-ja" onclick="onYes()">Ja 💖</button>
+        <button id="btn-nein" class="btn btn-nein">Nein 🙈</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== YES SCREEN ==================== -->
+  <div id="yes-screen" class="screen">
+    <div class="card card-yes">
+      <h1 class="yes-title">JAAAA!! 😍</h1>
+      <p class="yes-text">Ich freu mich so sehr! Bis zum 14.02.2026 kannst du dir die Zeit mit einem kleinen Herzchen-Spiel vertreiben 💘</p>
+
+      <div class="photo-frame">
+        <!-- Ersetze placeholder.svg durch dein Foto (z.B. placeholder.jpg) -->
+        <img id="couple-photo" src="assets/placeholder.svg" alt="Unser Foto">
+      </div>
+
+      <button class="btn btn-ja" onclick="startGame()">Herzchen-Spiel starten 🎮</button>
+    </div>
+
+    <!-- ==================== GAME AREA ==================== -->
+    <div id="game-wrapper" class="hidden">
+      <div class="game-hud">
+        <span>Score: <strong id="score">0</strong></span>
+        <span>Highscore: <strong id="highscore">0</strong></span>
+        <span>Leben: <strong id="lives">3</strong></span>
+      </div>
+      <canvas id="game-canvas"></canvas>
+      <div id="game-over-overlay" class="hidden">
+        <div class="game-over-box">
+          <h2>Game Over! 💔</h2>
+          <p>Dein Score: <span id="final-score">0</span></p>
+          <p>Highscore: <span id="final-highscore">0</span></p>
+          <button class="btn btn-ja" onclick="restartGame()">Nochmal spielen 💕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

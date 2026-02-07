@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#ffe0ec" rx="20"/>
+  <text x="200" y="180" text-anchor="middle" font-size="60">💕</text>
+  <text x="200" y="240" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#d63384">Ersetze mich durch</text>
+  <text x="200" y="265" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#d63384">euer gemeinsames Foto!</text>
+</svg>
